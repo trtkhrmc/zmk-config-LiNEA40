@@ -32,7 +32,6 @@
 #define JP_EISU         LANGUAGE_2        // 英数
 #define JP_HANZEN       GRAVE             // 半角/全角
 #define JP_BSLH  INT1         // (backslash)
-
 #define MOUSE 1
 #define MARK 2
 #define CURSOR 3
@@ -82,7 +81,7 @@
         layers = <SCROLL>;
         input-processors =
             <&zip_xy_transform INPUT_TRANSFORM_Y_INVERT>,
-            //スクロール方向を逆転,
+            //スクロール方向を逆転,,
             <&zip_xy_to_scroll_mapper>;
     };
 };
@@ -129,6 +128,11 @@
         layer_shift {
             bindings = <&lt_to_layer_0 4 LANGUAGE_2>;
             key-positions = <34 35>;
+        };
+
+        wireless {
+            bindings = <&mo 6>;
+            key-positions = <38 39>;
         };
     };
 
@@ -309,10 +313,10 @@
 
         default_layer {
             bindings = <
-&kp Q          &kp W         &kp E         &kp R    &kp T                                                 &kp Y        &kp U  &kp I                &kp O          &kp P
-&kp A          &kp S         &kp D         &kp F    &kp G                                                 &kp H        &kp J  &lt 5 K              &kp L          &lt 4 MINUS
-&mt Z LSHFT    &kp X         &kp C         &kp V    &kp B                                                 &kp N        &kp M  &kp COMMA            &kp DOT        &mt RIGHT_SHIFT SLASH
-&mt LCTRL ESC  &kp LEFT_WIN  &kp LEFT_ALT  &kp INS  &lt 3 SPACE  &lt_to_layer_0 5 LANG1    &kp BACKSPACE  &lt 5 ENTER         &lt 6 RIGHT_BRACKET  &kp BACKSLASH  &mt RIGHT_SHIFT SLASH
+&kp Q          &kp W         &kp E         &kp R    &kp T                                                 &kp Y        &kp U  &kp I      &kp O    &kp P
+&kp A          &kp S         &kp D         &kp F    &kp G                                                 &kp H        &kp J  &lt 5 K    &kp L    &moD
+&mt Z LSHFT    &kp X         &kp C         &kp V    &kp B                                                 &kp N        &kp M  &kp COMMA  &kp DOT  &mt RIGHT_SHIFT SLASH
+&mt LCTRL ESC  &kp LEFT_WIN  &kp LEFT_ALT  &kp INS  &lt 3 SPACE  &lt_to_layer_0 5 LANG1    &kp BACKSPACE  &lt 5 ENTER         &moE       &moH     &moI
             >;
 
             sensor-bindings = <&mouse_scrl SCRL_DOWN SCRL_UP>;
@@ -340,10 +344,10 @@
 
         CURSOR {
             bindings = <
-&kp EXCLAMATION  &kp DOUBLE_QUOTES  &kp HASH  &kp DOLLAR  &kp PERCENT                    &kp AMPERSAND  &kp SQT   &kp LEFT_PARENTHESIS  &kp RPAR   &trans
-&trans           &trans             &trans    &trans      &trans                         &trans         &trans    &kp UP                &trans     &trans
-&trans           &trans             &trans    &trans      &trans                         &trans         &kp LEFT  &kp DOWN              &kp RIGHT  &trans
-&trans           &trans             &trans    &trans      &trans       &trans    &trans  &trans                   &trans                &trans     &trans
+&kp EXCLAMATION  &kp DOUBLE_QUOTES  &kp HASH  &kp DOLLAR  &kp PERCENT                    &kp AMPERSAND  &kp SQT   &kp LEFT_PARENTHESIS  &kp RPAR   &moC
+&trans           &trans             &trans    &trans      &trans                         &moA           &moB      &kp UP                &moF       &moG
+&trans           &trans             &trans    &trans      &trans                         &trans         &kp LEFT  &kp DOWN              &kp RIGHT  &kp SLASH
+&trans           &trans             &trans    &trans      &trans       &trans    &trans  &trans                   &moE                  &moH       &moI
             >;
         };
 
