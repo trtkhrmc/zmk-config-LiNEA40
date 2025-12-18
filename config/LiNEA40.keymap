@@ -303,7 +303,7 @@
         td_mt: tap_dance_mod_tap {
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
-            tapping-term-ms = <220>;
+            tapping-term-ms = <280>;
             bindings = <&lt_to_layer_0 5 LANG1>, <&kp LANG2>;
         };
     };
