@@ -18,6 +18,6 @@ manifest:
       revision: main
     - name: zmk-rgbled-widget
       remote: caksoylar
-      revision: a3510c9de46de8b42c803286f4978466c6ea3916
+      revision: v0.3-branch
   self:
     path: config
